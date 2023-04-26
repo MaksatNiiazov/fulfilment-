@@ -23,6 +23,7 @@ figcaption,
 blockquote,
 dl,
 dd {
+  list-style-type: none;
   margin: 0;
 }
 
@@ -36,6 +37,8 @@ body {
 ul[class],
 ol[class] {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 a:not([class]) {
