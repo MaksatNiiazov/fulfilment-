@@ -55,7 +55,7 @@ nav li{
   background-color: aquamarine;
   text-align: center;
 }
-.about-us{
+.white{
   background-color: white;
 }
 .about-us .content{
@@ -71,6 +71,18 @@ justify-content: center;
 .about-us h2{
   text-align: center;
   width: 100%;
+}
+.about-us button{
+  display: block;
+  margin: 0 auto;
+}
+
+.work-with-us h2{
+  text-align: center;
+}
+.work-with-us button{
+  display: block;
+  margin: 0 auto;
 }
   
   /* Медиа-запрос для мобильных устройств */
