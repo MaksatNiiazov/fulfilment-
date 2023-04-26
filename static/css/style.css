@@ -1,0 +1,96 @@
+.background{
+    background-image: url('../imgs/background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    background-size: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.top-contacts{
+  display: flex;
+  justify-content: space-between;
+}
+
+.media-links{
+  display: flex;
+}
+
+.top-contacts p{
+  margin: 0;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li{
+    list-style-type: none;
+    
+}
+
+.logo{
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+}
+
+.logo img{
+  width: 200px;
+
+}
+
+.title{
+  text-align: center;
+}
+
+.color{
+  background-color: aquamarine;
+  text-align: center;
+}
+.about-us{
+  background-color: white;
+}
+.about-us .content{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+.about-us .content div{
+  border: 1px black solid;
+  margin: 10px;
+  width: 500px;
+  }
+.about-us h2{
+  text-align: center;
+  width: 100%;
+}
+  
+  /* Медиа-запрос для мобильных устройств */
+  @media (max-width: 767px) {
+    .container {
+      padding: 0 10px;
+    }
+  }
+  
+  /* Медиа-запрос для планшетов */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .container {
+      max-width: 720px;
+      padding: 0 15px;
+    }
+  }
+  
+  /* Медиа-запрос для небольших ноутбуков и мониторов */
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+      max-width: 960px;
+    }
+  }
