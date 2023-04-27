@@ -1,24 +1,3 @@
-const blocks = document.querySelectorAll(".block");
-
-// Перебираем все блоки на странице
-blocks.forEach((block) => {
-  const hiddenBlock = block.querySelector(".hidden-block");
-  const blockTitle = block.querySelector("p");
-
-  // Добавляем обработчик клика на заголовок блока
-  blockTitle.addEventListener("click", () => {
-    if (hiddenBlock.classList.contains("fade-in")) {
-      // Если класс .fade-in уже есть, то удаляем его
-      hiddenBlock.classList.remove("fade-in");
-    } else {
-      // Если класс .fade-in отсутствует, то добавляем его через 10 миллисекунд
-      setTimeout(() => {
-        hiddenBlock.classList.add("fade-in");
-      }, 10);
-    }
-  });
-});
-
 const slides = document.querySelector('.slider-wrapper').children;
 const prevButton = document.querySelector('[data-slide="prev"]');
 const nextButton = document.querySelector('[data-slide="next"]');

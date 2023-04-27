@@ -35,6 +35,7 @@ header{
 
 .media-links{
   display: flex;
+  filter: invert(1);
 }
 
 .top-contacts p{
@@ -138,6 +139,7 @@ justify-content: center;
 .about-us .content div{
   margin: 10px;
   max-width: 500px;
+  min-width: 100px;
   align-items: center;
   align-self: center;
 }
@@ -154,6 +156,7 @@ justify-content: center;
 .about-us button{
   display: block;
   margin: 0 auto;
+  color: aqua;
 }
 .about{
   display: flex;
@@ -169,7 +172,9 @@ justify-content: center;
 }
 .about span{
   display: inline-block;
-  width: 90%;
+  width: 85%;
+  margin-left: 5%;
+  padding-bottom: ;
 }
 .about button{
   border: black 1px solid;
@@ -181,6 +186,9 @@ justify-content: center;
   background-color: transparent;
   border-radius: 25px;
 }
+.work-with-us{
+  align-items: center;
+}
 .work-with-us h2{
   text-align: center;
 }
@@ -188,16 +196,37 @@ justify-content: center;
   display: block;
   margin: 0 auto;
 }
-
-.hidden-block {
-  opacity: 0;
-  height: 0px;
-  transition: opacity 1s ease-in-out;
+.work-with-us ul{
+  margin: 46px auto;
+  max-width: 800px;
 }
 
-.fade-in {
-  height: 100%;
-  opacity: 1;
+.work-with-us li{
+  display: flex;
+}
+.work-with-us li img{
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.work-with-us li span{
+  display: block;
+  height: 100px;
+  max-width: 500px;
+  
+}
+.work-with-us button{
+  
+  margin: 0 auto;
+  font-size: 15px;
+  font-weight: bold;
+  height: 50px;
+  width: 200px;
+  background-color: aqua;
+  border-radius: 25px;
 }
 
 /* Слайдер */
@@ -286,4 +315,76 @@ justify-content: center;
     line-height: 50px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
     transition: opacity 0.3
+  }
+
+
+  .info {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    border: 2px solid #d4ced1;
+    box-sizing: border-box;
+    border-radius: .833em;
+    overflow: hidden;
+    font: bold 14px/1em "Euclid Circular A", sans-serif;
+    background-color: #fff9f9;
+  }
+  .info:focus-within { border: 2px solid rgba(0, 172, 211, 0.5); }
+  .info:hover, .info:active { border-style: solid; }
+  
+  .info__switch { position: absolute; width: 0px; }
+  
+  .info__headline {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.666em;
+    box-sizing: border-box;
+    text-align: center;
+    transition: 0.4s ease-out;
+  }
+  .info__switch:checked~.info__headline {
+    background-color: #e4fff9;
+    transition: 0.4s ease-in;
+  }
+  
+  .info__headline::after {
+    content: "";
+    height: .666em; width: .666em;
+    border-bottom: .166em solid #101010;
+    border-right: .166em solid #101010;
+    box-sizing: border-box;
+    transform: rotate(45deg) translate(-50%, -0%);
+    transition: 0.4s ease-in-out;
+  }
+  .info__switch:checked~.info__headline::after {
+    transform: translate(-50%, -0%) rotate(45deg) scale(-1);
+  }
+  
+  .info__body {
+    position: relative;
+    max-height: 0;
+    padding: 0 2.366em 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex: 1;
+    font-size: .7em;
+    font-weight: normal;
+    color: #5b5b5d;
+    transition: 0.6s cubic-bezier(.24, .29, .4, .99);
+  }
+  .info__switch:checked~.info__body {
+    max-height: 100vh;
+    padding: 0 2.366em 2.366em;
+    background-color: #e4fffe;
+    transition: 0.4s ease-in;
+  }
+  
+  .info__body::after {
+    content: "";
+    position: absolute;
+    bottom: 0; left: 0;
+    height: 2.366em; width: 100%;
+    background-image: linear-gradient(#0000, #e4fffe);
   }
