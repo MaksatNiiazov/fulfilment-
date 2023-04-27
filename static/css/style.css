@@ -1,9 +1,12 @@
+body{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-image: url('../imgs/background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+}
 .background{
-    background-image: url('../imgs/background.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-
-    background-size: 100%;
+background-color: #00000083;
 }
 
 .container {
@@ -12,7 +15,10 @@
     margin: 0 auto;
     padding: 0 20px;
 }
+header{
+  color: #f7f5e7;
 
+}
 .top-contacts{
   display: flex;
   justify-content: space-between;
@@ -40,8 +46,9 @@ nav li{
 
 .logo{
   display: block;
-  margin: 0 auto;
+  margin: 40px auto 0;
   width: 200px;
+
 }
 
 .logo img{
@@ -50,13 +57,57 @@ nav li{
 }
 
 .title{
+  font-size: 25px;
+  color: #f7f5e7;
   text-align: center;
+  line-height: 35px;
+  margin: 40px 0 0;
+}
+.title p{
+  margin: 40px 0 0;
+  line-height: 40px;
+  font-weight: lighter; 
+}
+.title button{
+  margin: 46px 0 66px;
+  color: #f7f5e7;
+  font-size: 15px;
+  font-weight: bold;
+  height: 50px;
+  width: 200px;
+  background-color: aqua;
+  border-radius: 25px;
+  border: none;
+  
 }
 
 .color{
-  background-color: aquamarine;
+  background-color: aqua;
+  padding: 46px 0 0;
   text-align: center;
 }
+.color h2{
+  font-size: 46px;
+}
+.color p{
+  color: yellow;
+  margin-top: 40px;
+  font-size: 26px;
+  font-weight: bold;
+}
+.color button{
+  color: aqua;
+  border: none;
+  margin: 46px 0;
+  color: #f7f5e7;
+  font-size: 15px;
+  font-weight: bold;
+  height: 50px;
+  width: 200px;
+  background-color: yellow;
+  border-radius: 25px;
+}
+
 .white{
   background-color: white;
 }
@@ -86,6 +137,64 @@ justify-content: center;
   display: block;
   margin: 0 auto;
 }
+
+.hidden-block {
+  opacity: 0;
+  height: 0px;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-in {
+  height: 100%;
+  opacity: 1;
+}
+
+/* Слайдер */
+.slider {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.slider-wrapper {
+  position: absolute;
+  width: calc(20% * 10);
+  height: 100%;
+  left: 0;
+  display: flex;
+  transition: all 0.5s;
+}
+
+.slider-wrapper img {
+  width: 20%;
+  height: 100%;
+}
+
+.slider-wrapper .active {
+  opacity: 1;
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.slider-control {
+  margin: 0 10px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #000;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+/*  */
   
   /* Медиа-запрос для мобильных устройств */
   @media (max-width: 767px) {
