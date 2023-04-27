@@ -4,6 +4,8 @@ body{
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  background-size: cover;
+  min-width: 100%;
   
 }
 button{
@@ -117,6 +119,11 @@ nav li{
 
 .white{
   background-color: white;
+  padding: 20px 0;
+}
+.about-us h2{
+  font-size: 36px;
+  
 }
 .about-us .content{
 display: inline-flex;
@@ -129,9 +136,8 @@ justify-content: center;
   margin-left: 0;
 }
 .about-us .content div{
-  border: 1px black solid;
   margin: 10px;
-  width: 500px;
+  max-width: 500px;
   align-items: center;
   align-self: center;
 }
@@ -149,7 +155,32 @@ justify-content: center;
   display: block;
   margin: 0 auto;
 }
-
+.about{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+.about li{
+  margin-top: 10px;
+}
+.about img{
+  display: inline-block;
+  width: 10%;
+}
+.about span{
+  display: inline-block;
+  width: 90%;
+}
+.about button{
+  border: black 1px solid;
+  margin: 46px 0;
+  font-size: 15px;
+  font-weight: bold;
+  height: 50px;
+  width: 200px;
+  background-color: transparent;
+  border-radius: 25px;
+}
 .work-with-us h2{
   text-align: center;
 }
@@ -236,4 +267,23 @@ justify-content: center;
     .container {
       max-width: 960px;
     }
+  }
+
+
+  #back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 24px;
+    line-height: 50px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3
   }
