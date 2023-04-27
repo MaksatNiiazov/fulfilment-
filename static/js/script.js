@@ -1,39 +1,44 @@
-const slides = document.querySelector('.slider-wrapper').children;
-const prevButton = document.querySelector('[data-slide="prev"]');
-const nextButton = document.querySelector('[data-slide="next"]');
-let index = 0;
+const sliderRange = document.getElementById('slider-range');
+const sliderWrapper = document.querySelector('.slider-wrapper');
+const sliderItems = document.querySelectorAll('.slider-item');
+const prevButton = document.getElementById('prev-slide');
+const nextButton = document.getElementById('next-slide');
 
 prevButton.addEventListener('click', () => {
-  if (index === 0) {
-    index = slides.length - 5;
-  } else {
-    index--;
-  }
-  changeSlide(index);
+  slideTo(currentSlideIndex - 1);
 });
 
 nextButton.addEventListener('click', () => {
-  if (index === slides.length - 5) {
-    index = 0;
-  } else {
-    index++;
-  }
-  changeSlide(index);
+  slideTo(currentSlideIndex + 1);
 });
 
-function changeSlide(index) {
-    for (let i = 0; i < slides.length; i++) {
-      if (i >= index && i < index + 5) {
-        slides[i].classList.add('active');
-      } else {
-        slides[i].classList.remove('active');
-      }
-    }
-    const width = slides[0].offsetWidth;
-    const distance = -width * index;
-    sliderWrapper.style.transform = `translateX(${distance}px)`;
-  }
-  
+
+function setSliderWidth() {
+  const visibleSlides = sliderRange.value;
+  const slideWidth = 100 / visibleSlides;
+  sliderWrapper.style.width = `${sliderItems.length * slideWidth}%`;
+  sliderItems.forEach(item => {
+    item.style.flexBasis = `${slideWidth}%`;
+  });
+}
+
+function slideTo(index) {
+  const slideWidth = sliderItems[0].offsetWidth;
+  sliderWrapper.style.transform = `translateX(-${slideWidth * index}px)`;
+}
+
+sliderRange.addEventListener('input', () => {
+  setSliderWidth();
+  slideTo(0);
+});
+
+window.addEventListener('resize', () => {
+  setSliderWidth();
+});
+
+setSliderWidth();
+slideTo(0);
+
 
 
 
