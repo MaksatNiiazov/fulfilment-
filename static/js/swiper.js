@@ -1,28 +1,39 @@
 const sliderWrapper = document.querySelector('.slider-wrapper');
-const slides = Array.from(sliderWrapper.children);
+const sliderCards = document.querySelectorAll('.slider-card');
+const sliderButtons = document.querySelectorAll('.slider-button');
+let slideIndex = 0;
 
-const slideWidth = slides[0].getBoundingClientRect().width;
-const slideMargin = 10; // Расстояние между слайдами
-
-// Устанавливаем ширину обертки
-sliderWrapper.style.width = `${(slideWidth + slideMargin) * slides.length}px`;
-
-let currentIndex = 0;
-
-// Обработчик для кнопки "Вперед"
-document.querySelector('.next-btn').addEventListener('click', () => {
-  currentIndex++;
-  if (currentIndex > slides.length - 5) {
-    currentIndex = slides.length - 5;
+// Set slideIndex to index of first visible card
+for (let i = 0; i < sliderCards.length; i++) {
+  if (sliderCards[i].classList.contains('active')) {
+    slideIndex = i;
+    break;
   }
-  sliderWrapper.style.transform = `translateX(-${(slideWidth + slideMargin) * currentIndex}px)`;
+}
+
+// Add event listeners to slider buttons
+sliderButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const direction = button.dataset.slide;
+    if (direction === 'prev') {
+      slideIndex--;
+    } else {
+      slideIndex++;
+    }
+    slideIndex = slideIndex < 0 ? sliderCards.length - 3 : slideIndex;
+    slideIndex = slideIndex > sliderCards.length - 3 ? 0 : slideIndex;
+    sliderWrapper.style.transform = `translateX(-${slideIndex * (100 / 3)}%)`;
+    updateActiveCards();
+  });
 });
 
-// Обработчик для кнопки "Назад"
-document.querySelector('.prev-btn').addEventListener('click', () => {
-  currentIndex--;
-  if (currentIndex < 0) {
-    currentIndex = 0;
-  }
-  sliderWrapper.style.transform = `translateX(-${(slideWidth + slideMargin) * currentIndex}px)`;
-});
+// Update active cards based on slideIndex
+function updateActiveCards() {
+  sliderCards.forEach(card => {
+    card.classList.remove('active');
+    const cardIndex = Array.from(sliderCards).indexOf(card);
+    if (cardIndex >= slideIndex && cardIndex < slideIndex + 3) {
+      card.classList.add('active');
+    }
+  });
+}
