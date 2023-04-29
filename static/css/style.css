@@ -40,8 +40,12 @@ header{
 .media-links{
   display: flex;
   filter: invert(1);
+  
 }
-
+.media-links a{
+margin-left: 5px;
+  
+}
 .top-contacts p{
   margin: 0;
 }
@@ -220,8 +224,8 @@ justify-content: center;
 .work-with-us li img{
   content: "";
   display: block;
-  width: 100px;
-  height: 100px;
+  min-width: 100px;
+  min-height: 100px;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -312,7 +316,7 @@ justify-content: center;
     position: absolute;
     bottom: 0; left: 0;
     height: 2.366em; width: 100%;
-    background-image: linear-gradient(#0000, #e4fffe);
+    background-image: linear-gradient(#0000, #eee4ff);
   }
 .services h2{
   text-align: center;
