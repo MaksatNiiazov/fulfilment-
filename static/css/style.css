@@ -18,6 +18,9 @@ button{
 button:hover{
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.55);
 }
+ul{
+  padding: 0;
+}
 .background{
 background-color: #00000083;
 }
@@ -131,6 +134,25 @@ nav li{
   background-color: #181513;
   padding: 20px 0;
 }
+.about li{
+  display: flex;
+  margin-top: 10px;
+}
+.about li img{
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+.about li img{
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+.about li p{
+  display: block;
+  align-self: center;
+  margin-left: 20px;
+}
 .about-us h2{
   font-size: 36px;
   
@@ -161,28 +183,27 @@ justify-content: center;
   text-align: center;
   width: 100%;
 }
-.about-us button{
+/* .about-us button{
   display: block;
   margin: 0 auto;
   color: #FFA717;
-}
+} */
 .about{
   display: flex;
   flex-direction: column;
   align-self: center;
 }
+
 .about li{
   margin-top: 10px;
 }
 .about img{
   display: inline-block;
   filter: invert(0.9);
-  width: 10%;
 }
 .about span{
   display: inline-block;
-  width: 85%;
-  margin-left: 5%;
+  margin-left: 0%;
  
 }
 .about button{
@@ -330,34 +351,40 @@ justify-content: center;
   font-weight: bold;
   height: 50px;
   width: 200px;
-  color: #efefef;
+  color: #101010;
   background-color: #FFA717;
   border-radius: 25px;
 }
   .services-flex {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    padding: 0 20px;
   }
   
   .services-item {
     display: flex;
+    justify-content: flex-start;
     flex-basis: 45%;
     margin-bottom: 10px;
     padding: 10px;
     background-color: transparent;
-    border: 1px solid #ccc;
     border-radius: 5px;
     text-align: center;
+  }
+  .services-item:first-child {
+   margin-top: 20px;
   }
   .services-item img{
     width: 50px;
     height: 50px;
     display: block;
+    filter: invert(0.9);
   }
   .services-item p{
     align-self: center;
+    text-align: start;
     display: block;
     margin-left: 10px;
 
@@ -495,6 +522,7 @@ justify-content: center;
   @media (max-width: 767px) {
     .container {
       padding: 0 10px;
+      margin: 0;
     }
     .contact-with-us .content{
       flex-direction: column-reverse;
@@ -516,13 +544,24 @@ justify-content: center;
     width: 100%;
   }
   .services-item {
-    flex-basis: 80%;
+    flex-basis: 85%;
     margin-bottom: 10px;
     padding: 10px;
     background-color: transparent;
-    border: 1px solid #ccc;
     border-radius: 5px;
     text-align: center;
+  }
+  .services-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+  }
+  .about li p{
+    display: block;
+    align-self: center;
+    
   }
   }
   
