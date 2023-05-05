@@ -38,6 +38,10 @@ header{
   color: #f7f5e7;
 
 }
+.header-line{
+  height: 1px;
+  margin: 10px auto;
+}
 .top-contacts{
   display: flex;
   justify-content: space-between;
@@ -50,12 +54,72 @@ header{
 }
 .media-links a{
 margin-left: 5px;
-  
 }
+.media-links img{
+  height: 30px;
+  margin-left: 10px;
+  }
 .top-contacts p{
   margin: 0;
 }
 
+/*  */
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative;
+}
+
+nav li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 300px;
+    z-index: 5;
+    text-align: center;
+    transform: translateX(-50%);
+    background-color: #000000c5;
+    padding: 10px;
+}
+
+nav li:hover ul {
+    display: block;
+}
+nav li a:active {
+  color: #fff; /* устанавливаем белый цвет для посещенных ссылок */
+}
+nav li ul li {
+    display: block;
+    margin: 5px 0;
+}
+
+/* nav li a .triangle::after {
+  content: "\25BC";
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 10px;
+  line-height: 1;
+  vertical-align: middle;
+} */
+
+nav li a {
+  color: #fff; /* устанавливаем белый цвет для всех ссылок */
+  text-decoration: none; /* убираем подчеркивание */
+}
+
+a:hover {
+  color: #FFA717; /* меняем цвет ссылки при наведении на нее */
+}
+
+/* */ 
 nav ul{
     display: flex;
     flex-wrap: wrap;
@@ -379,13 +443,27 @@ justify-content: center;
   }
 
 
+  .second{
+    padding-bottom: 30px;
+  }
 .second h2{
+  padding: 40px 0 0;
     text-align: center;
     text-transform: none;
     font-size: 24px;
     
   }
-
+.second button{
+  display: block;
+  margin: 20px auto 0;
+  font-size: 15px;
+  font-weight: bold;
+  height: 50px;
+  width: 200px;
+  color: #101010;
+  background-color: #FFA717;
+  border-radius: 25px;
+}
 
 .fulfilment-item{
   display: flex;
@@ -402,12 +480,7 @@ justify-content: center;
 }
 .fulfilment-item img{
   margin-top: 15px;
-
-
 }
-
-
-
 
   .our-partners h2{
     text-align: center;
@@ -582,6 +655,9 @@ justify-content: center;
 
 
   @media (max-width: 767px) {
+    .top-contacts{
+      display: none;
+    }
     h1{
       font-size: 35px;
     }
@@ -650,15 +726,25 @@ justify-content: center;
     font-size: 20px;
     margin-bottom: 15px;
   }
+  nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+  }
+  nav li{
+    padding: 5px 0;
+
+  }
   }
 
   a[href^="#"] {
-    transition: all 1s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
   
 
 a[href^="#"]:hover {
-  color: blue; /* измените цвет, чтобы он соответствовал вашему дизайну */
+  color: #FFA717; /* измените цвет, чтобы он соответствовал вашему дизайну */
 }
 
 html {
@@ -667,4 +753,26 @@ html {
 
   transition-duration: 1s;
   overflow-y: scroll;
+  }
+
+
+  .fulfilment-container h2{
+    text-align: center;
+    padding-top: 30px;
+  }
+
+  .video-reviews{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .video-reviews h2{
+    padding: 40px 0 20px;
+  }
+  .video-reviews video{
+    margin: 0 auto;
+    width: 300px;
+    height: 450px;
+    background-color: #101010;
   }
