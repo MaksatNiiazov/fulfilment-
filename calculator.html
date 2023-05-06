@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Калькулятор услуг</title>
+	<link rel="stylesheet" href="/static/css/calculator.css">
+</head>
+<body>
+	<h1>Калькулятор услуг</h1>
+
+	<p>Выберите услуги и их цены:</p>
+	<label><span id="service1_name">Услуга 1</span> (<b id="service1_price">100</b> рублей)</label>
+	<button type="button" onclick="addToCart('service1')">Добавить</button><br>
+	<label><span id="service2_name">Услуга 2</span> (<b id="service2_price">20</b> рублей)</label>
+	<button type="button" onclick="addToCart('service2')">Добавить</button><br>
+	<label><span id="service3_name">Услуга 3</span> (<b id="service3_price">30</b> рублей)</label>
+	<button type="button" onclick="addToCart('service3')">Добавить</button><br>
+
+	<p>Итого:</p>
+	<form>
+		<ul id="cart_list"></ul>
+		<input type="text" id="total"  readonly>
+	</form>
+
+<script src="/static/js/calcolator.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+body {
+    background-color: #181513;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  h1 {
+    color: #FFA717;
+  }
+  
+  p {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  button {
+    background-color: #FFA717;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  input[type="text"] {
+    background-color: #FFA717;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-weight: bold;
+    width: 250px;
+    text-align: center;
+  }
+  
+  /* Оформление услуг */
+  #service1_name, #service2_name, #service3_name {
+    color: #FFA717;
+    font-weight: bold;
+  }
+  
+  #service1_price, #service2_price, #service3_price {
+    color: #FFA717;
+    font-weight: bold;
+  }
+  
+  /* Оформление корзины */
+  #cart_list li {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  #cart_list span {
+    color: #FFA717;
+    margin-right: 10px;
+  }
+  
+  #cart_list b {
+    color: #FFA717;
+  }
+  
