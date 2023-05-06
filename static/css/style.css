@@ -87,6 +87,7 @@ nav li ul {
     text-align: center;
     transform: translateX(-50%);
     background-color: #000000c5;
+    backdrop-filter: blur(3px);
     padding: 10px;
 }
 
