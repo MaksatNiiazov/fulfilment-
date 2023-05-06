@@ -26,6 +26,7 @@ ul{
 }
 .background{
 background-color: #000000b7;
+width: 100%;
 }
 
 .container {
@@ -82,12 +83,13 @@ nav li ul {
     position: absolute;
     top: 100%;
     left: 50%;
-    width: 300px;
+    width: 280px;
     z-index: 5;
     text-align: center;
     transform: translateX(-50%);
     background-color: #000000c5;
     backdrop-filter: blur(3px);
+    box-shadow: 0 0 10px #000000;
     padding: 10px;
 }
 
@@ -136,12 +138,12 @@ nav li{
 .logo{
   display: block;
   width: 100%;
+  margin: 40px auto;
 }
 
 .logo img{
   width: 300px;
   margin: 0 auto;
-  filter: invert(0.);
 }
 
 .title{
@@ -737,6 +739,17 @@ justify-content: center;
     padding: 5px 0;
 
   }
+  .logo{
+    display: block;
+    width: 100%;
+    margin: 10px auto;
+  }
+  .title h1{
+    font-size: 30px;
+  }
+  .title p{
+    font-size: 18px;
+    margin-top: 20px;
   }
 
   a[href^="#"] {
