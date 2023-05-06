@@ -2,14 +2,15 @@
 
 body{
 
-  font-family: "Poppins" , sans-serif;
-  color: #F0F0F0;
-  background-image: url('../imgs/background.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  min-width: 100%;
+
+    font-family: "Poppins", sans-serif;
+    color: #F0F0F0;
+    background-image: url('../imgs/background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    min-width: 100%;
   
 }
 a{
