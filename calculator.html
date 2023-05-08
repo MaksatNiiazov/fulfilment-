@@ -1,115 +1,524 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Калькулятор услуг</title>
-	<link rel="stylesheet" href="/static/css/calculator.css">
-</head>
-<body>
-	<div class="container">
-	<h1>Калькулятор услуг</h1>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Калькулятор услуг</title>
+    <link rel="stylesheet" href="/static/css/calculator.css">
+  </head>
+  <body>
+    <h1>Калькулятор услуг</h1>
+    <table id="services">
+     
+      <thead>
+        <tr>
+          <th>Услуги (без учёта упаковочного материала)</th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td>
+            Приёмка
+          </td>
+          <td>
+            пересчёт, сортировка, внесение в базу
+          </td>
+          <td>
+            4 (руб.)
+          </td>
+          <td>
+            <div class="input-group">
+              <button class="decrement">-</button>
+              <input type="number" value="0" min="0">
+              <button class="increment">+</button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Распаковка товара из пакета
+          </td>
+          <td>
+            
+          </td>
+          <td>
+            1 (руб.)
+          </td>
+          <td>
+            <div class="input-group">
+              <button class="decrement">-</button>
+              <input type="number" value="0" min="0">
+              <button class="increment">+</button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Проверка на брак визуально 
+          </td>
+          <td>
+            наличие пятен, дырок, ассиметрии
+          </td>
+          <td>
+            10 (руб.)
+          </td>
+          <td>
+            <div class="input-group">
+              <button class="decrement">-</button>
+              <input type="number" value="0" min="0">
+              <button class="increment">+</button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Проверка двойка на брак визуально
+          </td>
+          <td>
+            наличие пятен, дырок, ассиметрии
+          </td>
+          <td>
+            15 (руб.)
+          </td>
+          <td>
+            <div class="input-group">
+              <button class="decrement">-</button>
+              <input type="number" value="0" min="0">
+              <button class="increment">+</button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Чистка от торчащих ниток и пятен
+          </td>
+          <td>
+            
+          </td>
+          <td>
+            10 (руб.)
+          </td>
+          <td>
+            <div class="input-group">
+              <button class="decrement">-</button>
+              <input type="number" value="0" min="0">
+              <button class="increment">+</button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Прикрепление бирки 
+          </td>
+          <td>
+            этикетки
+          </td>
+          <td>
+            2 (руб.)
+          </td>
+          <td>
+            <div class="input-group">
+              <button class="decrement">-</button>
+              <input type="number" value="0" min="0">
+              <button class="increment">+</button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Одинарная маркировка
+          </td>
+          <td>
+            
+          </td>
+          <td>
+            1 (руб.)
+          </td>
+          <td>
+            <div class="input-group">
+              <button class="decrement">-</button>
+              <input type="number" value="0" min="0">
+              <button class="increment">+</button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Двойная маркировка 
+          </td>
+          <td>
+           
+          </td>
+          <td>
+            2 (руб.)
+          </td>
+          <td>
+            <div class="input-group">
+              <button class="decrement">-</button>
+              <input type="number" value="0" min="0">
+              <button class="increment">+</button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Упаковка в зип лок пакет
+          </td>
+          <td>
+            
+          </td>
+          <td>
+            4 (руб.)
+          </td>
+          <td>
+            <div class="input-group">
+              <button class="decrement">-</button>
+              <input type="number" value="0" min="0">
+              <button class="increment">+</button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Вкладка 
+          </td>
+          <td>
+            Открытки, вкладыши, визитки
+          </td>
+          <td>
+            1 (руб.)
+          </td>
+          <td>
+            <div class="input-group">
+              <button class="decrement">-</button>
+              <input type="number" value="0" min="0">
+              <button class="increment">+</button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Создание клише наклейки 
+          </td>
+          <td>
+            1 цветоразмер
+          </td>
+          <td>
+            20 (руб.)
+          </td>
+          <td>
+            <div class="input-group">
+              <button class="decrement">-</button>
+              <input type="number" value="0" min="0">
+              <button class="increment">+</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <thead>
+        <tr>
+          <th>Швейные услуги</th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td>
+            Перешив лейбла
+          </td>
+          <td>
+            
+          </td>
+          <td>
+            20 (руб.)
+          </td>
+          <td>
+            <div class="input-group">
+              <button class="decrement">-</button>
+              <input type="number" value="0" min="0">
+              <button class="increment">+</button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Перешив  составника
+          </td>
+          <td>
+            
+          </td>
+          <td>
+            15 (руб.)
+          </td>
+          <td>
+            <div class="input-group">
+              <button class="decrement">-</button>
+              <input type="number" value="0" min="0">
+              <button class="increment">+</button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Дополнительные швейные услуги
+          </td>
+          <td>
+            
+          </td>
+          <td>
+            <!-- 0 -->
+          </td>
+          <td>
+            <!-- <div class="input-group">
+              <button class="decrement">-</button>
+              <input type="number" value="0" min="0">
+              <button class="increment">+</button>
+            </div> -->
+          </td>
+        </tr>
+        <thead>
+          <tr>
+            <th>Работа с размерной сеткой</th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              Проверка размерности
+            </td>
+            <td>
+              1 размер по 1 линейке одной модели
+            </td>
+            <td>
+              6 (руб.)
+            </td>
+            <td>
+              <div class="input-group">
+                <button class="decrement">-</button>
+                <input type="number" value="0" min="0">
+                <button class="increment">+</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Проверка размерности - двойка
+            </td>
+            <td>
+              1 размер по 1 линейке одной модели
+            </td>
+            <td>
+              10 (руб.)
+            </td>
+            <td>
+              <div class="input-group">
+                <button class="decrement">-</button>
+                <input type="number" value="0" min="0">
+                <button class="increment">+</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Составление таблицы размеров для WB
+            </td>
+            <td>
+              1 размер по 1 линейке одной модели
+            </td>
+            <td>
+              200 (руб.)
+            </td>
+            <td>
+              <div class="input-group">
+                <button class="decrement">-</button>
+                <input type="number" value="0" min="0">
+                <button class="increment">+</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Составление таблицы размеров для WB (двойка)
+            </td>
+            <td>
+              1 размер по 1 линейке одной модели
+            </td>
+            <td>
+              400 (руб.)
+            </td>
+            <td>
+              <div class="input-group">
+                <button class="decrement">-</button>
+                <input type="number" value="0" min="0">
+                <button class="increment">+</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+        <thead>
+          <tr>
+            <th>Забор товара</th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              Логистика до карго
+            </td>
+            <td>
+              
+            </td>
+            <td>
+              500 (руб.)
+            </td>
+            <td>
+              <div class="input-group">
+                <button class="decrement">-</button>
+                <input type="number" value="0" min="0">
+                <button class="increment">+</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Забор товара у поставщика
+            </td>
+            <td>
+              
+            </td>
+            <td>
+              350 (руб.)
+            </td>
+            <td>
+              <div class="input-group">
+                <button class="decrement">-</button>
+                <input type="number" value="0" min="0">
+                <button class="increment">+</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Забор из Бишкека
+            </td>
+            <td>
+              (до 20 км от нашего склада) 800 руб / рейс (до 200 кг)
+            </td>
+            <td>
+              800 (руб.)
+            </td>
+            <td>
+              <div class="input-group">
+                <button class="decrement">-</button>
+                <input type="number" value="0" min="0">
+                <button class="increment">+</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+    
+    </table>
+    <div class="total">
+      <p id="total"></p>
+      <p id="count"></p>
+      <p id="average"></p>
+    </div>
+      
+    <script>
+ // Находим элементы таблицы и их содержимое
+const table = document.getElementById("services");
+const tbody = table.querySelector("tbody");
+const rows = tbody.querySelectorAll("tr");
 
-	
-	<h2>Услуги (без учёта упаковочного материала)</h2>
+// Находим элементы для вывода итоговых результатов
+const totalElement = document.getElementById("total");
+const averageElement = document.getElementById("average");
 
-<label>
-  <span id="service1_name">Приёмка (пересчёт, сортировка, внесение в базу)</span>
-  (<b id="service1_price">4</b> р)
-</label>
-<button type="button" onclick="addToCart('service1')">Добавить</button><br>
-<label>
-  <span id="service2_name">Распаковка товара из пакета</span>
-  (<b id="service2_price">1</b> р)
-</label>
-<button type="button" onclick="addToCart('service2')">Добавить</button><br>
-<label>
-  <span id="service3_name">Проверка на брак визуально (наличие пятен, дырок, ассиметрии)</span>
-  (<b id="service3_price">10</b> р)
-</label>
-<button type="button" onclick="addToCart('service3')">Добавить</button><br>
-<label>
-  <span id="service4_name">Проверка двойка на брак визуально (наличие пятен, дырок, ассиметрии)</span>
-  (<b id="service4_price">15</b> р)
-</label>
-<button type="button" onclick="addToCart('service4')">Добавить</button><br>
-<label>
-  <span id="service5_name">Чистка от торчащих ниток и пятен</span>
-  (<b id="service5_price">10</b> р)
-</label>
-<button type="button" onclick="addToCart('service5')">Добавить</button><br>
-<label>
-  <span id="service6_name">Прикрепление бирки (этикетки)</span>
-  (<b id="service6_price">2</b> р)
-</label>
-<button type="button" onclick="addToCart('service6')">Добавить</button><br>
-<label>
-  <span id="service7_name">Одинарная маркировка</span>
-  (<b id="service7_price">1</b> р)
-</label>
-<button type="button" onclick="addToCart('service7')">Добавить</button><br>
-<label>
-  <span id="service8_name">Двойная маркировка</span>
-  (<b id="service8_price">2</b> р)
-</label>
-<button type="button" onclick="addToCart('service8')">Добавить</button><br>
-<label>
-  <span id="service9_name">Упаковка в зип лок пакет</span>
-  (<b id="service9_price">4</b> р)
-</label>
-<button type="button" onclick="addToCart('service9')">Добавить</button><br>
-<label>
-  <span id="service10_name">Вкладка (Открытки, вкладыши, визитки)</span>
-  (<b id="service10_price">1</b> р)
-</label>
-<button type="button" onclick="addToCart('service10')">Добавить</button><br>
-<label>
-	<span id="service10_name">Создание клише наклейки (1 цветоразмер)</span>
-	(<b id="service10_price">20</b> р)
-</label>
-<button type="button" onclick="addToCart('service10')">Добавить</button><br>
+// Находим элементы кнопок увеличения и уменьшения количества услуг
+const decrementButtons = document.querySelectorAll(".decrement");
+const incrementButtons = document.querySelectorAll(".increment");
+
+// Объявляем переменные для хранения общей стоимости и количества услуг
+let total = 0;
+let count = 0;
+
+// Создаем функцию для обновления итоговых результатов
+function updateTotals() {
+  totalElement.textContent = `Общая стоимость: ${total}р`;
+  averageElement.textContent = `Средняя стоимость: ${total / count}р`;
+}
+
+// Добавляем обработчики событий для кнопок увеличения и уменьшения количества услуг
+decrementButtons.forEach(button => {
+  button.addEventListener("click", event => {
+    const input = event.target.parentNode.querySelector("input");
+    const value = parseInt(input.value);
+    if (value > 0) {
+      input.value = value - 1;
+      const row = event.target.closest("tr");
+      const price = parseInt(row.querySelector("td:nth-of-type(3)").textContent.slice(0));
+      total -= price;
+      count -= 1;
+      updateTotals();
+    }
+  });
+});
+
+incrementButtons.forEach(button => {
+  button.addEventListener("click", event => {
+    const input = event.target.parentNode.querySelector("input");
+    const value = parseInt(input.value);
+    input.value = value + 1;
+    const row = event.target.closest("tr");
+    const price = parseInt(row.querySelector("td:nth-of-type(3)").textContent.slice(0));
+    total += price;
+    count += 1;
+    updateTotals();
+  });
+});
+
+// Добавляем обработчики событий для изменения полей ввода количества услуг
+rows.forEach(row => {
+  const input = row.querySelector("input");
+  input.addEventListener("input", event => {
+    const value = parseInt(input.value);
+    if (value >= 0) {
+      const price = parseInt(row.querySelector("td:nth-of-type(3)").textContent.slice(1));
+      const prevValue = parseInt(input.getAttribute("data-prev-value"));
+      total -= price * (prevValue || 0);
+      total += price * value;
+      count += value - (prevValue || 0);
+      input.setAttribute("data-prev-value", value);
+      updateTotals();
+    } else {
+      input.value = input.getAttribute("data-prev-value") || 0;
+    }
+  });
+});
+const countElement = document.getElementById("count");
+function updateTotals() {
+  totalElement.textContent = `Общая стоимость: ${total}р`;
+  averageElement.textContent = `Средняя стоимость: ${total / count}р`;
+  countElement.textContent = `Общее количество услуг: ${count}`;
+}
 
 
-<label>
-    <span id="service11_name">Перешив лейбла</span>
-    (<b id="service11_price">20</b> рублей)
-</label>
-<button type="button" onclick="addToCart('service11')">Добавить</button><br>
-
-<label>
-    <span id="service2_name">Перешив составника</span>
-    (<b id="service2_price">15</b> рублей)
-</label>
-<button type="button" onclick="addToCart('service2')">Добавить</button><br>
-
-<label>
-    <span id="service3_name">Проверка размерности (1 размер по 1 линейке одной модели)</span>
-    (<b id="service3_price">6</b> рублей)
-</label>
-<button type="button" onclick="addToCart('service3')">Добавить</button><br>
-
-<label>
-    <span id="service4_name">Проверка размерности - двойка (1 размер по 1 линейке одной модели)</span>
-    (<b id="service4_price">10</b> рублей)
-</label>
-<button type="button" onclick="addToCart('service4')">Добавить</button><br>
-
-<label>
-    <span id="service5_name">Составление таблицы размеров для WB (1 размер по 1 линейке одной модели)</span>
-    (<b id="service5_price">200</b> рублей)
-</label>
-<button type="button" onclick="addToCart('service5')">Добавить</button><br>
-
-<label>
-    <span id="service6_name">Составление таблицы размеров для WB (двойка) (1 размер по 1 линейке одной модели)</span>
-    (<b id="service6_price">400</b> рублей)
-</label>
-<button type="button" onclick="addToCart('service6')">Добавить</button><br>
-
-	<p>Итого:</p>
-	<form>
-		<ul id="cart_list"></ul>
-		<input type="text" id="total"  readonly>
-	</form>
-</div>
-<script src="/static/js/calcolator.js"></script>
-</body>
+    </script>
+  </body>
 </html>
