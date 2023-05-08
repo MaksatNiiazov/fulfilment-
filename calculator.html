@@ -5,22 +5,111 @@
 	<link rel="stylesheet" href="/static/css/calculator.css">
 </head>
 <body>
+	<div class="container">
 	<h1>Калькулятор услуг</h1>
 
-	<p>Выберите услуги и их цены:</p>
-	<label><span id="service1_name">Услуга 1</span> (<b id="service1_price">100</b> рублей)</label>
-	<button type="button" onclick="addToCart('service1')">Добавить</button><br>
-	<label><span id="service2_name">Услуга 2</span> (<b id="service2_price">20</b> рублей)</label>
-	<button type="button" onclick="addToCart('service2')">Добавить</button><br>
-	<label><span id="service3_name">Услуга 3</span> (<b id="service3_price">30</b> рублей)</label>
-	<button type="button" onclick="addToCart('service3')">Добавить</button><br>
+	
+	<h2>Услуги (без учёта упаковочного материала)</h2>
+
+<label>
+  <span id="service1_name">Приёмка (пересчёт, сортировка, внесение в базу)</span>
+  (<b id="service1_price">4</b> р)
+</label>
+<button type="button" onclick="addToCart('service1')">Добавить</button><br>
+<label>
+  <span id="service2_name">Распаковка товара из пакета</span>
+  (<b id="service2_price">1</b> р)
+</label>
+<button type="button" onclick="addToCart('service2')">Добавить</button><br>
+<label>
+  <span id="service3_name">Проверка на брак визуально (наличие пятен, дырок, ассиметрии)</span>
+  (<b id="service3_price">10</b> р)
+</label>
+<button type="button" onclick="addToCart('service3')">Добавить</button><br>
+<label>
+  <span id="service4_name">Проверка двойка на брак визуально (наличие пятен, дырок, ассиметрии)</span>
+  (<b id="service4_price">15</b> р)
+</label>
+<button type="button" onclick="addToCart('service4')">Добавить</button><br>
+<label>
+  <span id="service5_name">Чистка от торчащих ниток и пятен</span>
+  (<b id="service5_price">10</b> р)
+</label>
+<button type="button" onclick="addToCart('service5')">Добавить</button><br>
+<label>
+  <span id="service6_name">Прикрепление бирки (этикетки)</span>
+  (<b id="service6_price">2</b> р)
+</label>
+<button type="button" onclick="addToCart('service6')">Добавить</button><br>
+<label>
+  <span id="service7_name">Одинарная маркировка</span>
+  (<b id="service7_price">1</b> р)
+</label>
+<button type="button" onclick="addToCart('service7')">Добавить</button><br>
+<label>
+  <span id="service8_name">Двойная маркировка</span>
+  (<b id="service8_price">2</b> р)
+</label>
+<button type="button" onclick="addToCart('service8')">Добавить</button><br>
+<label>
+  <span id="service9_name">Упаковка в зип лок пакет</span>
+  (<b id="service9_price">4</b> р)
+</label>
+<button type="button" onclick="addToCart('service9')">Добавить</button><br>
+<label>
+  <span id="service10_name">Вкладка (Открытки, вкладыши, визитки)</span>
+  (<b id="service10_price">1</b> р)
+</label>
+<button type="button" onclick="addToCart('service10')">Добавить</button><br>
+<label>
+	<span id="service10_name">Создание клише наклейки (1 цветоразмер)</span>
+	(<b id="service10_price">20</b> р)
+</label>
+<button type="button" onclick="addToCart('service10')">Добавить</button><br>
+
+
+<label>
+    <span id="service11_name">Перешив лейбла</span>
+    (<b id="service11_price">20</b> рублей)
+</label>
+<button type="button" onclick="addToCart('service11')">Добавить</button><br>
+
+<label>
+    <span id="service2_name">Перешив составника</span>
+    (<b id="service2_price">15</b> рублей)
+</label>
+<button type="button" onclick="addToCart('service2')">Добавить</button><br>
+
+<label>
+    <span id="service3_name">Проверка размерности (1 размер по 1 линейке одной модели)</span>
+    (<b id="service3_price">6</b> рублей)
+</label>
+<button type="button" onclick="addToCart('service3')">Добавить</button><br>
+
+<label>
+    <span id="service4_name">Проверка размерности - двойка (1 размер по 1 линейке одной модели)</span>
+    (<b id="service4_price">10</b> рублей)
+</label>
+<button type="button" onclick="addToCart('service4')">Добавить</button><br>
+
+<label>
+    <span id="service5_name">Составление таблицы размеров для WB (1 размер по 1 линейке одной модели)</span>
+    (<b id="service5_price">200</b> рублей)
+</label>
+<button type="button" onclick="addToCart('service5')">Добавить</button><br>
+
+<label>
+    <span id="service6_name">Составление таблицы размеров для WB (двойка) (1 размер по 1 линейке одной модели)</span>
+    (<b id="service6_price">400</b> рублей)
+</label>
+<button type="button" onclick="addToCart('service6')">Добавить</button><br>
 
 	<p>Итого:</p>
 	<form>
 		<ul id="cart_list"></ul>
 		<input type="text" id="total"  readonly>
 	</form>
-
+</div>
 <script src="/static/js/calcolator.js"></script>
 </body>
 </html>

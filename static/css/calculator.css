@@ -47,7 +47,7 @@ body {
   }
   
   /* Оформление услуг */
-  #service1_name, #service2_name, #service3_name {
+  /* #service1_name, #service2_name, #service3_name {
     color: #FFA717;
     font-weight: bold;
   }
@@ -55,11 +55,12 @@ body {
   #service1_price, #service2_price, #service3_price {
     color: #FFA717;
     font-weight: bold;
-  }
+  } */
   
   /* Оформление корзины */
   #cart_list li {
     margin-bottom: 10px;
+    font-size: 20px;
     font-weight: bold;
   }
   
@@ -72,3 +73,23 @@ body {
     color: #FFA717;
   }
   
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+label{
+}
+
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+}
